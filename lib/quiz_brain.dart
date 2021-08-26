@@ -37,8 +37,6 @@ class QuizBrain {
     if (_questionNumber < _questionBank.length - 1) {
       _questionNumber++;
     }
-    print(_questionNumber);
-    print(_questionBank.length);
   }
 
   String getQuestionText() {
@@ -47,5 +45,9 @@ class QuizBrain {
 
   bool getQuestionAnswer() {
     return _questionBank[_questionNumber].questionAnswer;
+  }
+
+  bool isEndOfQuestions() {
+    return _questionNumber == _questionBank.length - 1;
   }
 }
